@@ -24,7 +24,7 @@ multiarc <- function(overlap, trees, burnin=0, n=length(trees) - burnin, tri = "
     #print(trees)
     empirical.x <-array(dim=c(0,2))
     random.x <-array(dim=c(0,2))
-    
+
     for(i in 1:length(trees)){
         print(paste("Replicate", i))
         x <- age.range.correlation(trees[[i]], overlap, tri, reps.per.tree)
@@ -38,11 +38,3 @@ multiarc <- function(overlap, trees, burnin=0, n=length(trees) - burnin, tri = "
     list(empirical.replicates = empirical.x, MonteCarlo.replicates = random.x)
 }
 
-
-#for(p in 1:10){
-#    names <- sample(names)
-#    rownames(overlap) <- colnames(overlap) <- names
-#    test2 <- age.range.correlation.2(phy=trees[[1000]], overlap=overlap, n=1)
-#    print(test2$linear.regression)
-#    print(test2$MonteCarlo.replicates)
-#}
