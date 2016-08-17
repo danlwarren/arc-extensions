@@ -1,4 +1,7 @@
 require(fields)  # Used for Euclidean distance matrices
+
+# xy is a two-columnmatrix of x and y values
+# species is a vector of species names of the same length as ncol(xy)
 nncluster <- function(xy, species){
 
   # Figure out how many species we've got, initialize a data frame
